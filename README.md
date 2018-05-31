@@ -1,5 +1,7 @@
 # Maintenance Tracker RESTful API #
 
+[![Build Status](https://travis-ci.org/Ayeeta/Maintenance_TrackerRESTful_API.svg?branch=develop)](https://travis-ci.org/Ayeeta/Maintenance_TrackerRESTful_API)
+
 ### Technologies ###
 
 * Python
