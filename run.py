@@ -4,20 +4,20 @@ from classes.usrRequest import UserRequest
 app = Flask(__name__)
 usr = UserRequest()
 
-@app.route('/requestAll', methods = ['GET'])
+@app.route('/users/requests', methods = ['GET'])
 def return_all_requests():
     return jsonify(usr.getAll())
 
-@app.route('/repair-all', methods = ['GET'])
+@app.route('/users/requests/repair', methods = ['GET'])
 def return_repair_all():
     return jsonify(usr.repairAll())
 
-@app.route('/maintenance-all', methods = ['GET'])
+@app.route('/users/requests/maintenance', methods = ['GET'])
 def return_maintenance_all():
     return jsonify(usr.maintenanceAll())
 
 
-@app.route('/create_repair', methods = ['POST'])
+@app.route('/users/requests', methods = ['POST'])
 def create_repair_request():
     test = request.get_json()
     
@@ -28,15 +28,15 @@ def create_repair_request():
 
 
 
-@app.route('/', methods = ['GET','POST'])
+@app.route('/users/requests', methods = ['POST'])
 def create_maintenance_request():
     pass
 
-@app.route('/', methods = ['GET', 'POST'])
+@app.route('/users/requests/requestID', methods = ['PUT'])
 def modify_repair_req():
     pass
 
-@app.route('/', methods = ['GET', 'POST'])
+@app.route('/users/requests/requestID', methods = ['PUT'])
 def modify_maintenance_req():
     pass
 
