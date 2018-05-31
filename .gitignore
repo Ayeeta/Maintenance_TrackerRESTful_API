@@ -1,0 +1,5 @@
+*.pyc
+__pycache__/
+api_venv/
+.vscode/
+.pytest_cache/

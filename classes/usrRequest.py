@@ -1,7 +1,7 @@
 class UserRequest(object):
     def __init__(self):
-        self.repairlist = []
-        self.maintenancelist =[]        
+        self.repairlist = [{'prob_id':0,'Title':'sony','Prob_desc':'Screen Crack'}]
+        self.maintenancelist =[{'prob_id':1,'Title':'Toshiba','Prob_desc':'Antivirus reinstall'}]        
         self.pos = 0
 
     def repair_req(self, title, desc):
