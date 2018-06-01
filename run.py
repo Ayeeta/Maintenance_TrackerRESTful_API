@@ -17,12 +17,10 @@ def return_maintenance_all():
     return jsonify(usr.maintenanceAll())
 
 
-@app.route('/users/requests', methods = ['POST'])
+@app.route('/users/requests/repair', methods = ['POST'])
 def create_repair_request():
-    test = request.get_json()
-    
-    test2 = {'prob_id':0,'Title':test['Title'],'Prob_desc':test['Prob_desc']}
-    usr.repairlist.append(test2)
+    par = request.get_json()      
+    usr.repair_req(par['Title'], par['Prob_desc'])
     return jsonify(usr.repairlist)
      
 

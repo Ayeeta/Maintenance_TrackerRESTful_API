@@ -13,7 +13,7 @@ A set of API end points as defined below
 
 * GET /users/requests/maintenance - Fetch all maintenance requests 
 
-* POST /users/requests - Create a request. 
+* POST /users/requests/repair - Create a repair request. 
 
 * PUT /users/requests/<requestId> - Modify a request. 
 
