@@ -22,21 +22,24 @@ def create_repair_request():
     par = request.get_json()      
     usr.repair_req(par['Title'], par['Prob_desc'])
     return jsonify(usr.repairlist)
-     
 
-
-
-@app.route('/users/requests', methods = ['POST'])
+@app.route('/users/requests/maintenance', methods = ['POST'])
 def create_maintenance_request():
-    pass
+    par = request.get_json()
+    usr.maintenance_req(par['Title'], par['Prob_desc'])
+    return jsonify(usr.maintenancelist)
 
-@app.route('/users/requests/requestID', methods = ['PUT'])
-def modify_repair_req():
-    pass
+@app.route('/users/requests/repair/<prob_id>', methods = ['PUT'])
+def modify_repair_req(prob_id):
+    par = request.get_json()
+    usr.editRepair(prob_id, par['Title'], par['Prob_desc'])
+    return jsonify(usr.repairlist)    
 
-@app.route('/users/requests/requestID', methods = ['PUT'])
-def modify_maintenance_req():
-    pass
+@app.route('/users/requests/maintenance/<prob_id>', methods = ['PUT'])
+def modify_maintenance_req(prob_id):
+    par = request.get_json()
+    usr.editMaintenance(prob_id,par['Title'], par['Prob_desc'])
+    return jsonify(usr.maintenancelist)
 
 
 if __name__ == '__main__':
