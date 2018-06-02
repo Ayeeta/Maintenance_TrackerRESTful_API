@@ -5,13 +5,15 @@
 
 A set of API end points as defined below
 
-* GET/users/requests - Fetch all the requests of a logged in user 
+* GET/users/requests - Fetch all the requests  
 
 * GET /users/requests/repair - Fetch all repair requests 
 
 * GET /users/requests/maintenance - Fetch all maintenance requests 
 
 * POST /users/requests/repair - Create a repair request. 
+
+* POST /users/requests/maintenance - Create a maintenance request.
 
 * PUT /users/requests/repair/<post_id> - Modify a repair request. 
 
