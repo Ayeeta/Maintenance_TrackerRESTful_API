@@ -34,7 +34,8 @@ A set of API end points as defined below
 ### Running tests ###
 
 `nosetests`
+`postman` -To test the API end points
 
-### Authors ###
+### Author ###
 
 Elijah Ayeeta
