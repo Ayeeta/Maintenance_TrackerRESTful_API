@@ -10,11 +10,11 @@ class TDDUserRequest(unittest.TestCase):
         self.user_req.maintenancelist = []
 
     def test_repair_req_appends_to_list(self):
-        result = self.user_req.repair_req('u24','25/12/2018','sony', 'screen broken')        
+        result = self.user_req.repair_req('u24','25/12/2018','prob_id','sony', 'screen broken')        
         self.assertIn(result, self.user_req.repairlist)
     
     def test_maint_req_appends_to_list(self):
-        result = self.user_req.maintenance_req('u24/40F','12/02/2018','acer','reinstall avg')
+        result = self.user_req.maintenance_req('u24/40F','12/02/2018','prob_id','acer','reinstall avg')
         self.assertIn(result, self.user_req.maintenancelist)
 
     def test_get_all_returns_dict(self):
