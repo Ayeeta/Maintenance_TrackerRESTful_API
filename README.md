@@ -5,19 +5,19 @@
 
 A set of API end points as defined below
 
-* GET/users/requests - Fetch all the requests  
+* GET /api/v1/users/requests - Fetch all the requests  
 
-* GET /users/requests/repair - Fetch all repair requests 
+* GET /api/v1/users/requests/repair - Fetch all repair requests 
 
-* GET /users/requests/maintenance - Fetch all maintenance requests 
+* GET /api/v1/users/requests/maintenance - Fetch all maintenance requests 
 
-* POST /users/requests/repair - Create a repair request. 
+* POST /api/v1/users/<user_id>/requests/repair - Create a repair request. 
 
-* POST /users/requests/maintenance - Create a maintenance request.
+* POST /api/v1/users/<user_id>/requests/maintenance - Create a maintenance request.
 
-* PUT /users/requests/repair/<post_id> - Modify a repair request. 
+* PUT /api/v1/users/<user_id>/requests/repair/<prob_id> - Modify a repair request. 
 
-* PUT /users/requests/maintenance/<post_id> - Modify a maintenance request. 
+* PUT /api/v1/users/<user_id>/requests/maintenance/<prob_id> - Modify a maintenance request. 
 
 
 
